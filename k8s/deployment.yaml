@@ -1,3 +1,20 @@
-server :
-appVersion : v1
-image : 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: dev-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-container
+          image: mylandingpageweb
+          ports:
+            - containerPort: 8000
