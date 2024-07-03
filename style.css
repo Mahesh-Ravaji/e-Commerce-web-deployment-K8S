@@ -5,21 +5,15 @@
     box-sizing: border-box;
 }
 
-.myheading {
-    font-size: 50px;
-    font-style: italic;
-    font-style: 🌼 ;
-    color: #fff;
-    text-align: center;
-    margin-top: 50px;
-}
-
 /* Body and font styles */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    background-image: url('images/background.jpg'); /* Background image for the body */
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Container to center content */
@@ -27,13 +21,15 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
 }
 
 /* Header styling */
 header {
-    background: #3498db;
+    background: url('images/header.jpg') no-repeat center center/cover; /* Background image for the header */
     color: #fff;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -71,16 +67,19 @@ nav ul li a:hover {
 /* Sidebar styling */
 .sidebar {
     width: 30%;
-    background: #ecf0f1;
+    background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('images/sidebar.jpg'); /* Background image for the sidebar */
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 /* Article styling */
 .article {
     width: 65%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -92,9 +91,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
+    background-image: url('images/footer.jpg'); /* Background image for the footer */
+    background-size: cover;
 }
 
 /* Button styling */
@@ -115,7 +116,7 @@ footer {
 
 /* Form styling */
 form {
-    background: #ecf0f1;
+    background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
