@@ -14,7 +14,9 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: frontend-container
-          image: mylandingpageweb
+        - name: mypagecontainer
+          image: mylandingpageweb  # Use the correct image tag
           ports:
             - containerPort: 8000
+      imagePullSecrets:
+        - name: myregistrykey
