@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mypagecontainer
-          image: mylandingpageweb  # Use the correct image tag
+          image: maheshravaji/mylandingpageweb:latest  # Use the correct image tag
           ports:
             - containerPort: 8000
       imagePullSecrets:

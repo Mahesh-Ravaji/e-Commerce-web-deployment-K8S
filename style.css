@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    background-image: url('images/background.jpg'); /* Background image for the body */
+    background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the body */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -35,8 +35,8 @@ body {
 
 /* Header styling */
 header {
-    background: url('images/header.jpg') no-repeat center center/cover; /* Background image for the header */
-    color: #fff;
+    background: url('anime_assetts/anime-T-shirts/img2.jpg') no-repeat center center/cover; /* Background image for the header */
+    color: #ff0000cc;
     padding: 40px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -79,7 +79,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('images/sidebar.jpg'); /* Background image for the sidebar */
+    background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the sidebar */
     background-size: cover;
     background-blend-mode: multiply;
 }
