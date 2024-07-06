@@ -10,9 +10,25 @@
     .hidden {
       display: none;
     }
+    .scrolling-wrapper {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scroll 22s linear infinite;
+    }
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .scrolling-wrapper div:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s;
+    }
   </style>
 </head>
 <body class="bg-gray-100">
+  
+
   <!-- Header -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
@@ -24,22 +40,77 @@
           <li><a href="#mobile_covers" class="text-gray-800">Mobile Covers</a></li>
           <li><a href="#laptop_covers" class="text-gray-800">Laptop Covers</a></li>
           <li><a href="#full_getup" class="text-gray-800">Full Getup</a></li>
+          <li><a href="#anime_wallpapers" class="text-gray-800">Anime Wallpaper HD</a></li>
+          <li><a href="#anime_quotes" class="text-gray-800">Anime Quotes Wallpaper</a></li>
           <li><a href="#cart" class="text-gray-800">Cart</a></li>
+          <li><a href="#returns_orders" class="text-gray-800">Returns and Orders</a></li>
         </ul>
       </nav>
+      <div>
+        <button class="text-gray-800">Signup/Login</button>
+      </div>
     </div>
   </header>
+
 
   <!-- Main Banner -->
   <section class="bg-cover bg-center h-64" style="background-image: url('images/banner.jpg');">
     <div class="container mx-auto h-full flex items-center justify-center">
-      <h1 class="main_heading">Welcome to Anime Trends</h1>
+      <h2 class="main_heading">Welcome to Anime Trends</h2>
     </div>
   </section>
+  
+  <!-- Trendings Section -->
+  <section id="trendings" class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Trendings</h2>
+    <div class="scrolling-wrapper">
+      <div class="bg-white p-4 rounded-lg shadow product naruto mx-2">
+        <img src="/anime_assetts/Anime-Mobile-covers/image 5.jpg" alt="Naruto Mobile Cover" class="w-full h-48 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mt-2">Naruto Mobile Cover</h3>
+        <p class="text-gray-600">Anime: Naruto</p>
+        <p class="text-gray-600">Size: 6.1 inches, Shape: Rectangular</p>
+        <p class="text-gray-600">Price: $19.99</p>
+        <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow product one_piece mx-2">
+        <img src="/anime_assetts/Anime-Mobile-covers/imag 2.avif" alt="One Piece Mobile Cover" class="w-full h-48 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mt-2">One Piece Mobile Cover</h3>
+        <p class="text-gray-600">Anime: One Piece</p>
+        <p class="text-gray-600">Size: 6.1 inches, Shape: Rectangular</p>
+        <p class="text-gray-600">Price: $19.99</p>
+        <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow product one_piece mx-2">
+        <img src="/anime_assetts/Anime-Mobile-covers/image 3 .jpg" alt="Over The Sky" class="w-full h-48 object-cover">
+        <h3 class="text-lg font-bold text-gray-800 mt-2">Overthesky Mobile Cover</h3>
+        <p class="text-gray-600">Anime: Over the Sky</p>
+        <p class="text-gray-600">Size: 6.1 inches, Shape: Rectangular</p>
+        <p class="text-gray-600">Price: $19.99</p>
+        <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+      </div>
+
+      <!-- Add more trending product cards as needed -->
+    </div>
+  </section>
+
 
   <!-- Mobile Covers Section -->
   <section id="mobile_covers" class="container mx-auto py-8">
     <h2 class="text-3xl font-bold text-gray-800 mb-4">Mobile Covers</h2>
+
+    <!-- Anime Pictures -->
+    <div class="flex justify-center mb-6">
+      <img src="anime_assetts/anime-pictures/naruto.jpg" alt="Naruto" class="w-20 h-20 object-cover mx-2">
+      <img src="anime_assetts/anime-pictures/one_piece.jpg" alt="One Piece" class="w-20 h-20 object-cover mx-2">
+      <img src="anime_assetts/anime-pictures/bleach.jpg" alt="Bleach" class="w-20 h-20 object-cover mx-2">
+      <img src="anime_assetts/anime-pictures/black_clover.jpg" alt="Black Clover" class="w-20 h-20 object-cover mx-2">
+      <img src="anime_assetts/anime-pictures/demon_slayer.jpg" alt="Demon Slayer" class="w-20 h-20 object-cover mx-2">
+    </div>
 
     <!-- Subsections -->
     <div class="mb-6">
@@ -48,8 +119,8 @@
       <button onclick="filterProducts('one_piece')" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">One Piece</button>
       <button onclick="filterProducts('bleach')" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Bleach</button>
       <button onclick="filterProducts('black_clover')" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Black Clover</button>
-      <button onclick="filterProducts('demon_slayer')" class="bg-blue-500 text-white px-4 py-2 rounded mr-2">Demon Slayer</button>
-      <button onclick="filterProducts('combined')" class="bg-blue-500 text-white px-4 py-2 rounded">Combined</button>
+      <button onclick="filterProducts('demon_slayer')" class="bg-blue-500 text-white px-4 py-2 rounded">Demon Slayer</button>
+      <button onclick="filterProducts('anime_quotes')" class="bg-blue-500 text-white px-4 py-2 rounded">Anime Quotes Wallpaper</button>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,7 +145,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product one_piece" id="mobcovid_ii">
+      <div class="bg-white p-4 rounded-lg shadow product one_piece" id="mobcovid_iii">
         <img src="/anime_assetts/Anime-Mobile-covers/image 3 .jpg" alt="Over The Sky" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Overthesky Mobile Cover</h3>
         <p class="text-gray-600">Anime: Over the Sky</p>
@@ -103,7 +174,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_ii">
         <img src="anime_assetts/Laptop_Cover/img4.jpg" alt="Naruto Laptop Cover" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">One Piece Laptop Cover</h3>
         <p class="text-gray-600">Anime: Naruto</p>
@@ -113,7 +184,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_iii">
         <img src="anime_assetts/Laptop_Cover/img3.jpeg" alt="Naruto Laptop Cover" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">One Piece Laptop Cover</h3>
         <p class="text-gray-600">Anime: Naruto</p>
@@ -123,7 +194,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="lapcovid_iv">
         <img src="anime_assetts/Laptop_Cover/img1.jpg" alt="Naruto Laptop Cover" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">One Piece Laptop Cover</h3>
         <p class="text-gray-600">Anime: Naruto</p>
@@ -151,7 +222,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="tshirtid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="tshirtid_ii">
         <img src="anime_assetts/anime-T-shirts/img3.jpg" alt="Naruto T-Shirt" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Dragon Ball Z T-Shirt</h3>
         <p class="text-gray-600">Anime: Dragon Ball Z</p>
@@ -161,7 +232,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="tshirtid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="tshirtid_iii">
         <img src="anime_assetts/anime-T-shirts/Anime T shirts.jpg" alt="Naruto T-Shirt" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Dragon Ball Z T-Shirt</h3>
         <p class="text-gray-600">Anime: Dragon Ball Z</p>
@@ -190,7 +261,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_ii">
         <img src="anime_assetts/Anime Pants/img5.jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
         <p class="text-gray-600">Anime: Attack on Titan</p>
@@ -200,7 +271,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_iii">
         <img src="anime_assetts/Anime Pants/img2.jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
         <p class="text-gray-600">Anime: Attack on Titan</p>
@@ -210,7 +281,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_iv">
         <img src="anime_assetts/Anime Pants/img1.jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
         <p class="text-gray-600">Anime: Attack on Titan</p>
@@ -220,7 +291,7 @@
         <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
       </div>
 
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_i">
+      <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_v">
         <img src="anime_assetts/Anime Pants/img6 .jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
         <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
         <p class="text-gray-600">Anime: Attack on Titan</p>
@@ -234,63 +305,35 @@
     </div>
   </section>
 
-  <!-- Full Getup Section -->
-  <section id="full_getup" class="container mx-auto py-8">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">Full Getup</h2>
+  <!-- Anime Wallpaper HD Section -->
+  <section id="anime_wallpapers" class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Anime Wallpaper HD</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Product Card -->
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="getupid_i">
-        <img src="anime_assetts/Anime Full Outfit/img1.jpg" alt="Naruto Full Getup" class="w-full h-48 object-cover">
-        <h3 class="text-lg font-bold text-gray-800 mt-2">Akatsuki Broken Heart Heros</h3>
-        <p class="text-gray-600">Anime: Sailor Moon</p>
-        <p class="text-gray-600">Size: S, Shape: Cosplay Costume</p>
-        <p class="text-gray-600">Price: $49.99</p>
-        <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
-        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="getupid_i">
-        <img src="anime_assetts/Anime Full Outfit/img6.jpg" alt="Naruto Full Getup" class="w-full h-48 object-cover">
-        <h3 class="text-lg font-bold text-gray-800 mt-2">Mikasa Scarf</h3>
-        <p class="text-gray-600">Anime: Attack On Titan</p>
-        <p class="text-gray-600">Size: S, Shape: Cosplay Costume</p>
-        <p class="text-gray-600">Price: $39.99</p>
-        <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
-        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
-      </div>
-
-
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="getupid_i">
-        <img src="anime_assetts/Anime Full Outfit/img10.jpeg" alt="Naruto Full Getup" class="w-full h-48 object-cover">
-        <h3 class="text-lg font-bold text-gray-800 mt-2">Gojo Saturo Jacket</h3>
-        <p class="text-gray-600">Anime: Jujutsu Kaisen</p>
-        <p class="text-gray-600">Size: S, Shape: Cosplay Costume</p>
-        <p class="text-gray-600">Price: $49.99</p>
-        <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
-        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="getupid_i">
-        <img src="anime_assetts/Anime Full Outfit/img4.jpg" alt="Naruto Full Getup" class="w-full h-48 object-cover">
-        <h3 class="text-lg font-bold text-gray-800 mt-2">Sailor Moon Full Getup</h3>
-        <p class="text-gray-600">Anime: Sailor Moon</p>
-        <p class="text-gray-600">Size: S, Shape: Cosplay Costume</p>
-        <p class="text-gray-600">Price: $49.99</p>
-        <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
-        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg shadow product naruto" id="getupid_i">
-        <img src="anime_assetts/Anime Full Outfit/img3.jpg" alt="Naruto Full Getup" class="w-full h-48 object-cover">
-        <h3 class="text-lg font-bold text-gray-800 mt-2">Sailor Moon Full Getup</h3>
-        <p class="text-gray-600">Anime: Sailor Moon</p>
-        <p class="text-gray-600">Size: S, Shape: Cosplay Costume</p>
-        <p class="text-gray-600">Price: $49.99</p>
-        <p class="text-gray-600">Rating: ⭐⭐⭐⭐⭐</p>
-        <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
-      </div>
-      <!-- Repeat for more products -->
+      <!-- Add your products for Anime Wallpaper HD here -->
     </div>
+  </section>
+
+  <!-- Anime Quotes Wallpaper Section -->
+  <section id="anime_quotes" class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Anime Quotes Wallpaper</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Add your products for Anime Quotes Wallpaper here -->
+    </div>
+  </section>
+
+  <!-- Returns and Orders Section -->
+  <section id="returns_orders" class="container mx-auto py-8">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Returns and Orders</h2>
+    <div>
+      <p class="text-gray-600">For any issues with your orders or to return a product, please contact our customer service at <a href="mailto:support@animetrends.com" class="text-blue-500">support@animetrends.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- Scan QR Code to Download App -->
+  <section class="container mx-auto py-8 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Scan QR Code to Download App</h2>
+    <img src="images/qr-code.png" alt="QR Code to Download App" class="mx-auto">
+    <p class="text-gray-600 mt-2">Scan the QR code to download our app and stay updated with the latest anime trends!</p>
   </section>
 
   <!-- Footer -->
