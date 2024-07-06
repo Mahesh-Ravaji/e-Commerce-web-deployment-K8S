@@ -185,3 +185,171 @@ form input[type="submit"]:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Add this to your CSS file */
+.scrolling-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  /* Ensures smooth transition and scaling on hover */
+  .scrolling-wrapper div {
+    display: inline-block;
+  }
+  
+  .scrolling-wrapper div:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+  }
+
+  /* Add this to your CSS file for better spacing and alignment */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  header .flex {
+    align-items: center;
+  }
+  
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .logo p {
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  .social-icons a:hover {
+    color: #3498db;
+  }
+  
+  .social-icons i {
+    cursor: pointer;
+  }
+  
+  .social-icons i:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+  }
+  
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .cta a {
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .cta a:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Add this to your CSS file for better spacing and alignment */
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .sidebar {
+    width: 30%;
+    background: rgba(236, 240, 241, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .article {
+    width: 65%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8
+}
+
+
+/* <-- Anime quotes section CSS files  --> */
+#anime_quotes {
+    
+}
+.product {
+    margin-bottom: 20px; /* Adjust margin between products */
+  }
+  
+  .product img {
+    border-radius: 8px 8px 0 0; /* Rounded corners on top only */
+  }
+  
+  .product h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+  
+  .product p {
+    margin-bottom: 8px; /* Space between paragraphs */
+  }
+  
+  .product button {
+    display: block;
+    margin-top: 12px; /* Space between text and button */
+  }
+  
+  /* Optional: Hover effect on product */
+  .product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: translateY(-2px); /* Lift on hover */
+  }
+  
+  /* Optional: Button hover effect */
+  .product button:hover {
+    background-color: #3182ce; /* Darker background on hover */
+  }
+  

@@ -33,6 +33,24 @@
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold text-gray-800">Anime Trends</h1>
+      <!-- Place this inside the header div, before the nav element -->
+    <div class="flex items-center space-x-4">
+      <div class="search-filter">
+        <input type="text" placeholder="Search products..." class="px-4 py-2 border-0">
+        <button class="bg-blue-500 text-white px-4 py-2">Filter</button>
+      </div>
+    </div>
+
+    <!-- Add these inside the header div, after the nav element -->
+    <!-- <div class="flex items-center space-x-4">
+      <a href="#" class="text-gray-800">
+        <img src="images/userlogo.png" alt="User Profile" class="w-6 h-6">
+      </a>
+      <a href="#cart" class="text-gray-800">
+        <img src="images/trolly.png" alt="Cart" class="w-6 h-6">
+      </a>
+    </div> -->
+
       <nav>
         <ul class="flex space-x-4">
           <li><a href="#" class="text-gray-800">Home</a></li>
@@ -42,10 +60,32 @@
           <li><a href="#full_getup" class="text-gray-800">Full Getup</a></li>
           <li><a href="#anime_wallpapers" class="text-gray-800">Anime Wallpaper HD</a></li>
           <li><a href="#anime_quotes" class="text-gray-800">Anime Quotes Wallpaper</a></li>
-          <li><a href="#cart" class="text-gray-800">Cart</a></li>
           <li><a href="#returns_orders" class="text-gray-800">Returns and Orders</a></li>
+          <!-- <li><a href="#cart" class="text-gray-800">Cart</a></li> -->
         </ul>
       </nav>
+      <!-- Add this inside the header div, after the nav element -->
+      <div class="flex items-center space-x-4">
+        <!-- <a href="#" class="logo">
+          <img src="anime_assetts/Anime WallPaper/allinone** .jpg" alt="User Profile" class="w-6 h-6">
+        </a> -->
+        <a href="#cart" class="text-gray-800">
+          <img src="anime_assetts/Extra Pics& Logo/luffy cart.jpeg" alt="🛒" class="w-6 h-6">
+        </a>
+
+        <a href="#Login" class="text-gray-800">
+          <img src="anime_assetts/Extra Pics& Logo/user profile .jpeg" alt="🛒" class="w-6 h-6">
+        </a>
+      </div>
+
+      <!-- Add this inside the header div, before the nav element -->
+      <!-- <div class="search">
+        <input type="text" placeholder="Search products..." class="px-4 py-2 border border-gray-300 rounded-lg">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Filter</button>
+      </div> -->
+
+
+
       <div>
         <button class="text-gray-800">Signup/Login</button>
       </div>
@@ -308,18 +348,57 @@
   <!-- Anime Wallpaper HD Section -->
   <section id="anime_wallpapers" class="container mx-auto py-8">
     <h2 class="text-3xl font-bold text-gray-800 mb-4">Anime Wallpaper HD</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Add your products for Anime Wallpaper HD here -->
+    
+    <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_v">
+      <img src="anime_assetts/Anime Pants/img6 .jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
+      <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
+      <p class="text-gray-600">Anime: Attack on Titan</p>
+      <p class="text-gray-600">Size: L, Shape: Slim Fit</p>
+      <p class="text-gray-600">Price: $34.99</p>
+      <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+      <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+    </div>
+
+
+    <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_v">
+      <img src="anime_assetts/Anime Pants/img6 .jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
+      <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
+      <p class="text-gray-600">Anime: Attack on Titan</p>
+      <p class="text-gray-600">Size: L, Shape: Slim Fit</p>
+      <p class="text-gray-600">Price: $34.99</p>
+      <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+      <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
+    </div>
+
+
+    <div class="bg-white p-4 rounded-lg shadow product naruto" id="pantsid_v">
+      <img src="anime_assetts/Anime Pants/img6 .jpeg" alt="Naruto Pants" class="w-full h-48 object-cover">
+      <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
+      <p class="text-gray-600">Anime: Attack on Titan</p>
+      <p class="text-gray-600">Size: L, Shape: Slim Fit</p>
+      <p class="text-gray-600">Price: $34.99</p>
+      <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+      <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
     </div>
   </section>
 
   <!-- Anime Quotes Wallpaper Section -->
   <section id="anime_quotes" class="container mx-auto py-8">
     <h2 class="text-3xl font-bold text-gray-800 mb-4">Anime Quotes Wallpaper</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Add your products for Anime Quotes Wallpaper here -->
+  
+    <div class="bg-white p-4 rounded-lg shadow product naruto">
+      <img src="anime_assetts/Anime Pants/img6 .jpeg" alt="Attack on Titan Pants" class="w-full h-48 object-cover">
+      <h3 class="text-lg font-bold text-gray-800 mt-2">Attack on Titan Pants</h3>
+      <p class="text-gray-600">Anime: Attack on Titan</p>
+      <p class="text-gray-600">Size: L, Shape: Slim Fit</p>
+      <p class="text-gray-600">Price: $34.99</p>
+      <p class="text-gray-600">Rating: ⭐⭐⭐⭐☆</p>
+      <button class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Add to Cart</button>
     </div>
+  
+    <!-- Add more product divs as needed -->
   </section>
+  
 
   <!-- Returns and Orders Section -->
   <section id="returns_orders" class="container mx-auto py-8">
