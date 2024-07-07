@@ -1,355 +1,673 @@
-/* Reset some default browser styles for consistency across different browsers */
+/* Reset some default browser styles for consistency across different browsers
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body and font styles */
+
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the body */
-    background-size: cover;
-    background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the body */
+  background-size: cover;
+  background-attachment: fixed;
 }
-.main_heading{
-    text-align: center;
-    font-size: 100px;
-    color: #393205;
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+.main_heading {
+  text-align: center;
+  font-size: 100px;
+  color: #393205;
+  padding: 40px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Container to center content */
 .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 8px;
 }
 
 /* Header styling */
 header {
-    background: url('anime_assetts/anime-T-shirts/img2.jpg') no-repeat center center/cover; /* Background image for the header */
-    color: #ff0000cc;
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url('anime_assetts/anime-T-shirts/img2.jpg') no-repeat center center/cover; /* Background image for the header */
+  color: #ff0000cc;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+header .flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .search-filter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+header .search-filter input {
+  border: none;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+header .search-filter button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+header .search-filter button:hover {
+  background-color: #2980b9;
+}
+
+header .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+header .logo h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+header .logo p {
+  font-size: 14px;
+  color: #fff;
+}
+
+header .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+header .social-icons a:hover {
+  color: #3498db;
+}
+
+header .social-icons i {
+  cursor: pointer;
+}
+
+header .social-icons i:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+header .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+header .cta a {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+header .cta a:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
 }
 
 /* Navigation styling */
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+  display: inline;
+  margin-right: 10px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background 0.3s;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: #2980b9;
+  background: #2980b9;
 }
 
 /* Main content styling */
 .main-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
 /* Sidebar styling */
 .sidebar {
-    width: 30%;
-    background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the sidebar */
-    background-size: cover;
-    background-blend-mode: multiply;
+  width: 30%;
+  background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the sidebar */
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 /* Article styling */
 .article {
-    width: 65%;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 65%;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer styling */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-    background-image: url('images/footer.jpg'); /* Background image for the footer */
-    background-size: cover;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  background-image: url('images/footer.jpg'); /* Background image for the footer */
+  background-size: cover;
 }
 
 /* Button styling */
 .button {
-    display: inline-block;
-    background: #e74c3c;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .button:hover {
-    background: #c0392b;
-    transform: translateY(-2px);
+  background: #c0392b;
+  transform: translateY(-2px);
 }
 
 /* Form styling */
 form {
-    background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+  background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 form input[type="submit"] {
-    background: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
 }
 
 form input[type="submit"]:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
+  background: #2980b9;
+  transform: translateY(-2px);
 }
 
 /* Utility classes for spacing */
 .mt-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .pt-20 {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .pb-20 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .sidebar, .article {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Add this to your CSS file */
-.scrolling-wrapper {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: scroll 20s linear infinite;
-  }
-  
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  /* Ensures smooth transition and scaling on hover */
-  .scrolling-wrapper div {
-    display: inline-block;
-  }
-  
-  .scrolling-wrapper div:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s;
-  }
-
-  /* Add this to your CSS file for better spacing and alignment */
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header nav {
-    flex-grow: 1;
-    margin-left: 20px;
-  }
-  
-  header .flex {
-    align-items: center;
-  }
-  
-.logo {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  .logo h1 {
-    font-size: 24px;
-    color: #fff;
-  }
-  
-  .logo p {
-    font-size: 14px;
-    color: #fff;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
-  }
-  
-  .social-icons a:hover {
-    color: #3498db;
-  }
-  
-  .social-icons i {
-    cursor: pointer;
-  }
-  
-  .social-icons i:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s;
-  }
-  
-  .cta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .cta a {
-    background: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
-  }
-  
-  .cta a:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
-  }
-  
-  /* Add this to your CSS file for better spacing and alignment */
   .main-content {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+      flex-direction: column;
   }
-  
-  .sidebar {
-    width: 30%;
-    background: rgba(236, 240, 241, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .sidebar, .article {
+      width: 100%;
+      margin-bottom: 20px;
   }
-  
-  .article {
-    width: 65%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8
 }
 
-
-/* <-- Anime quotes section CSS files  --> */
-#anime_quotes {
-    
+/* Trendings section */
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  animation: scroll 20s linear infinite;
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.scrolling-wrapper div {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.scrolling-wrapper div:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* Anime quotes section CSS files */
+#anime_quotes {}
+
 .product {
-    margin-bottom: 20px; /* Adjust margin between products */
+  margin-bottom: 20px; /* Adjust margin between products */
+}
+
+.product img {
+  border-radius: 8px 8px 0 0; /* Rounded corners on top only */
+}
+
+.product h3 {
+  font-size: 1.5rem; /* Adjust heading size */
+}
+
+.product p {
+  margin-bottom: 8px; /* Space between paragraphs */
+}
+
+.product button {
+  display: block;
+  margin-top: 12px; /* Space between text and button */
+}
+
+/* Optional: Hover effect on product */
+.product:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  transform: translateY(-2px); /* Lift on hover */
+}
+
+/* Optional: Button hover effect */
+.product button:hover {
+  background-color: #3182ce; /* Darker background on hover */
+}
+
+/* Aniime Wallapaper section CSS files */
+
+/* Add this to your CSS file for consistent grid layout */
+
+.grid {
+  display: grid;
+  gap: 1.5rem; /* Adjust the gap as needed */
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  
-  .product img {
-    border-radius: 8px 8px 0 0; /* Rounded corners on top only */
+}
+
+/* Product card styling */
+.product {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product h3 {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product p {
+  margin-top: 0.25rem;
+  color: #666;
+}
+
+.product button {
+  margin-top: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #2980b9;
+} */
+
+/* ---------------------------------------------------
+ */
+
+/* Reset some default browser styles for consistency across different browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and font styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the body */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main_heading {
+  text-align: center;
+  font-size: 100px;
+  color: #393205;
+  padding: 40px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container to center content */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  border-radius: 8px;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Header styling */
+header {
+  background: url('anime_assetts/anime-T-shirts/img2.jpg') no-repeat center center/cover; /* Background image for the header */
+  color: #ff0000cc;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #2980b9;
+}
+
+/* Main content styling */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 30%;
+  background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: url('anime_assetts/anime-T-shirts/img2.jpg'); /* Background image for the sidebar */
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+/* Article styling */
+.article {
+  width: 65%;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Card Styling */
+.section-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.section-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.section-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 15px;
+}
+
+.section-card p {
+  color: #666;
+  margin: 0 15px 15px;
+}
+
+.section-card button {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 0 15px 15px;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.section-card button:hover {
+  background-color: #2980b9;
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  background-image: url('images/footer.jpg'); /* Background image for the footer */
+  background-size: cover;
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Form styling */
+form {
+  background: rgba(236, 240, 241, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Utility classes for spacing */
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column;
   }
-  
-  .product h3 {
-    font-size: 1.5rem; /* Adjust heading size */
+
+  .sidebar, .article {
+      width: 100%;
+      margin-bottom: 20px;
   }
-  
-  .product p {
-    margin-bottom: 8px; /* Space between paragraphs */
-  }
-  
-  .product button {
-    display: block;
-    margin-top: 12px; /* Space between text and button */
-  }
-  
-  /* Optional: Hover effect on product */
-  .product:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-    transform: translateY(-2px); /* Lift on hover */
-  }
-  
-  /* Optional: Button hover effect */
-  .product button:hover {
-    background-color: #3182ce; /* Darker background on hover */
-  }
-  
+}
+
+
+.scrolling-wrapper hover{
+  animation-play-state: paused;
+
+}
