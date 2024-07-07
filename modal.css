@@ -1,0 +1,138 @@
+/* styles.css */
+
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+  max-width: 400px;
+  background-color: #e4e4a2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.signup-link a:hover {
+    color: #0056b3;
+}
+
+.other-signin,
+.other-signup {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signin-option,
+.signup-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.signin-option span,
+.signup-option span {
+    margin: 0 10px;
+    color: #555555;
+}
+
+.google-signin,
+.google-signup {
+    color: #dd4b39; /* Google Red */
+}
+
+.github-signin,
+.github-signup {
+    color: #24292e; /* GitHub Black */
+}
+
+.meta-signin,
+.meta-signup {
+    color: #3e3e3e; /* Meta Gray */
+}
+
+/* Additional styles for signup page */
+
+.welcome-msg {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 180px;
+    padding: 15px;
+    background-color: #6f42c1; /* Purple */
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: rotate(45deg);
+    font-weight: bold;
+}
+
+.welcome-msg h3 {
+    margin: 0;
+    font-size: 14px;
+    transform: rotate(-45deg);
+}

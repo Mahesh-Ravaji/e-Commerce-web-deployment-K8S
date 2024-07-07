@@ -78,6 +78,23 @@
         </a>
       </div>
 
+      <!-- ASignUP and Login section  -->
+      <!-- Add these buttons somewhere appropriate in your existing HTML -->
+<div class="auth-buttons">
+    <button id="signupBtn">Sign Up</button>
+    <button id="signinBtn">Sign In</button>
+</div>
+
+<!-- Popup Modal HTML -->
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you already signed in?</p>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+</div>
+
       <!-- Add this inside the header div, before the nav element -->
       <!-- <div class="search">
         <input type="text" placeholder="Search products..." class="px-4 py-2 border border-gray-300 rounded-lg">
@@ -469,7 +486,7 @@
   <!-- Scan QR Code to Download App -->
   <section class="container mx-auto py-8 text-center">
     <h2 class="text-3xl font-bold text-gray-800 mb-4">Scan QR Code to Download App</h2>
-    <img src="images/qr-code.png" alt="QR Code to Download App" class="mx-auto">
+    <img src="anime_assetts/Extra Pics& Logo/App.png" alt="QR Code to Download App" class="mx-auto">
     <p class="text-gray-600 mt-2">Scan the QR code to download our app and stay updated with the latest anime trends!</p>
   </section>
 
@@ -492,6 +509,59 @@
       });
     }
   </script>
+
+
+<!-- Add this script at the end of your body -->
+<script>
+  // Get modal element
+  var modal = document.getElementById("authModal");
+
+  // Get buttons that open the modal
+  var signupBtn = document.getElementById("signupBtn");
+  var signinBtn = document.getElementById("signinBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // Get yes and no buttons in the modal
+  var yesBtn = document.getElementById("yesBtn");
+  var noBtn = document.getElementById("noBtn");
+
+  // When the user clicks the Sign Up or Sign In button, open the modal 
+  signupBtn.onclick = function() {
+      modal.style.display = "block";
+      yesBtn.onclick = function() {
+          window.location.href = "signin.html";
+      };
+      noBtn.onclick = function() {
+          window.location.href = "signup.html";
+      };
+  }
+
+  signinBtn.onclick = function() {
+      modal.style.display = "block";
+      yesBtn.onclick = function() {
+          window.location.href = "signin.html";
+      };
+      noBtn.onclick = function() {
+          window.location.href = "signup.html";
+      };
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+
+
 
 </body>
 </html>

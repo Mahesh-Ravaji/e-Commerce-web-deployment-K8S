@@ -671,3 +671,10 @@ form input[type="submit"]:hover {
   animation-play-state: paused;
 
 }
+
+.container mx-auto py-8 text-center{
+  max-width: 1200px;
+  height: 20px;
+  width: 3cm;
+  animation-name: 🥾 ;
+}
