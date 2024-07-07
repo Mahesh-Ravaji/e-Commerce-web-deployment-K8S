@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Sign In</h2>
-        <form action="your_signin_endpoint" method="post">
+        <form action="your_signin_endpoint" method="post" class="signin-form">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
@@ -18,17 +18,12 @@
             
             <button type="submit">Sign In</button>
         </form>
-        <div class="signup-link">
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-        </div>
-        
-        <div class="other-signin">
-            <p>Or sign in with:</p>
-            <div class="signin-option">
-                <span class="google-signin">Google</span>
-                <span class="github-signin">GitHub</span>
-                <span class="meta-signin">Meta</span>
-            </div>
+    </div>
+
+    <div class="welcome-box">
+        <div class="welcome-heading">Welcome Back!</div>
+        <div class="welcome-message">
+            Thanks for revisiting Anime Trends! 🌸 Let's continue our journey together!
         </div>
     </div>
 </body>
