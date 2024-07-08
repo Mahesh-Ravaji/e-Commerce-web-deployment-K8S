@@ -142,8 +142,9 @@ Once you have your Kubernetes manifests ready:
 By following these steps, you can effectively deploy and manage your Dockerized Node.js application using Kubernetes (K8s). If you have specific questions or need further clarification on any part of this process, feel free to ask!
 
 
-Visualization:
 
+Visualization:
+```
 ┌─────────────────────────┐
 │      Deployment         │
 │ (frontend-deployment)   │
@@ -197,6 +198,8 @@ Visualization:
 └─────────────────────────┘
 
 ```
+Extra Point ⏬
+``` 
 +-----------------------------------------------------------------+
 |                          Kubernetes Cluster                     |
 |                                                                 |
