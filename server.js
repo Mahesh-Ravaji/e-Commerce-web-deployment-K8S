@@ -1,13 +1,16 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
-const PORT = 8000;
+const port = 8000;
 
+// Serve static files
+app.use('/anime_assetts', express.static(path.join(__dirname, 'anime_assetts')));
+
+// Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
