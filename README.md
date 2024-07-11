@@ -3,7 +3,11 @@
 2. i created and pushed docker image on docker hub
 3. i made k8s yaml file to setup containers on it stil.. 
 
+<<<<<<< HEAD
 ### <h2> Problem i faced while doing this Project 🫠   </h2>
+=======
+
+>>>>>>> 55b9c067fe87802d5960e5c4ea128e717fbfef86
 1. unable to connect ( site Can't reached ) after  pulling my docker image on onther machine
 2. i Know that yaml files of k8s are correctly typed still a am not able to access my application 
    'command :' http://<cluster_ip>:<nodeport_ip>
