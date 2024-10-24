@@ -3,16 +3,9 @@
 ### <h1>Description of Project </h1>
 1. Here i tried to deploy E commerce application on K8S
 2. i created and pushed docker image on docker hub
-3. i made k8s yaml file to setup containers on it stil.. 
+3. i made k8s yaml file to setup containers on it 
 
-<<<<<<< HEAD
-### <h2> Problem i faced while doing this Project 🫠   </h2>
-=======
 
->>>>>>> 55b9c067fe87802d5960e5c4ea128e717fbfef86
-1. unable to connect ( site Can't reached ) after  pulling my docker image on onther machine
-2. i Know that yaml files of k8s are correctly typed still a am not able to access my application 
-   'command :' http://<cluster_ip>:<nodeport_ip>
 
 ### <h1>Kubernetes Setup </h1> ###
 
@@ -242,3 +235,15 @@ Extra Point ⏬
 |  +---------------------+    +---------------------+             |
 +-----------------------------------------------------------------+
 ```
+<<<<<<< HEAD
+### <h3> Problem i faced while doing this Project 🫠   </h3>
+=======
+
+>>>>>>> 55b9c067fe87802d5960e5c4ea128e717fbfef86
+1. unable to connect ( site Can't reached ) after  pulling my docker image 
+   ---> but i solved finally ( how :)) - i messed in Service.yaml file of kubernetes that's it ... )
+2. i Know that yaml files of k8s are correctly typed still a am not able to access my application 
+   'command :' http://<cluster_ip>:<nodeport_ip> 
+3. ETC...  
+
+NOTE : Enjoy the journey, whether difficult or easy, for it's the making of a better you :) that's the person who i am :)
